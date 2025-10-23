@@ -18,7 +18,7 @@ def chart():
     items = response.get('Items', [])
     print("Raw items:", items)
     
-    # ✅ Extract nested button values
+    # Extract nested button values
     buttons = [int(item['payload']['button']) for item in items if 'payload' in item and 'button' in item['payload']]
     print("Extracted buttons:", buttons)
     
@@ -33,3 +33,4 @@ def chart():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
